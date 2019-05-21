@@ -8,7 +8,7 @@ export const loginAction = (key, token) => async (dispatch) => {
     dispatch({type: constants.LOGIN_START});
 
     try {
-        const response = await request.get(`https://api.trello.com/1/members/me/?key=${key}&token=${token}`)
+        const response = await request.get(`https://api.trello.com/1/members/me/?key=${key}&token=${token}`);
         const body = response.body;
 
         if (body) {
@@ -30,7 +30,7 @@ export const loginAction = (key, token) => async (dispatch) => {
             dispatch({type: constants.FETCH_ALL_BOARDS, result});
         }
     } catch (error) {
-        logger.logger('Invalid KEY or TOKEN. Try Again.')
+        logger.logger('Invalid KEY or TOKEN. Try Again.');
         dispatch({type: constants.LOGIN_FAIL});
     }
 
@@ -65,7 +65,6 @@ export const getBoardLists = (id) => async (dispatch, getState) => {
 
 export const getBoardActions = (id) => async (dispatch, getState) => {
     const state = getState().rootReducer;
-
     const actions = await request.get(`https://api.trello.com/1/boards/${id}/actions?key=${state.key}&token=${state.token}`);
     dispatch({type: constants.FETCH_BOARD_ACTIONS, actionsList: actions.body})
 };

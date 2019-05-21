@@ -46,12 +46,10 @@ class LoginComponent extends Component {
 
     onChangeKey(e) {
         this.props.onChangeKeyDispatch(e.target.value);
-        this.loggerService.logger(`KEY: ${e.target.value}`);
     }
 
     onChangeToken(e) {
         this.props.onChangeTokenDispatch(e.target.value);
-        this.loggerService.logger(`TOKEN: ${e.target.value}`);
     }
 
     handleSubmit(e) {
@@ -64,7 +62,6 @@ class LoginComponent extends Component {
         }
 
         this.props.onSubmitFormDispatch(key, token);
-        this.loggerService.logger('Login form is filled and submitted');
     }
 
     render() {

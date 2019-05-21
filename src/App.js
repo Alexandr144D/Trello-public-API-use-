@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import {Route} from 'react-router-dom';
 import {withRouter} from 'react-router-dom';
-import {connect} from 'react-redux';
 import HeaderComponent from "./components/headerComponent/headerComponent";
 import DashboardComponent from "./components/DashboardComponent/DashboardComponent";
 import LoginComponent from "./components/LoginCompoent/LoginComponent";
@@ -13,10 +12,6 @@ const ROUTES = {
 };
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
   render() {
     return(
         <div className='app'>
@@ -35,15 +30,4 @@ class App extends React.Component {
   }
 }
 
-
-const mapStateToProps = state => {
-    return {
-    }
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-    }
-}
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(App));
+export default withRouter(App);
