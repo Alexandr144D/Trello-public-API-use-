@@ -1,0 +1,105 @@
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-wrapper p {
+    margin: 0;
+    padding: 0;
+}
+
+.icons-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-icon,
+.board-icon,
+.trello-logo,
+.login-icon,
+.actions-logo {
+    width: 24px;
+    height: 24px;
+    padding: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    margin: 0 5px 0 0;
+    border-radius: 4px;
+    position: relative;
+    background: hsla(0, 0%, 100%, .3);
+}
+
+.board-icon::after,
+.trello-logo::after,
+.trello-logo::after,
+.login-icon::after {
+    top: 7px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    position: absolute;
+    font-style: italic;
+}
+
+.actions-logo {
+    margin: 0 0 0 60px;
+}
+
+.actions-logo::after {
+    position: absolute;
+    margin-left: 60px;
+    right: -64px;
+    content: 'Actions';
+    font-size: 16px;
+    top: 7px;
+    font-style: italic;
+    font-weight: 600;
+    color: #fff;
+}
+
+.board-icon::after {
+    right: -60px;
+    content: 'Boards';
+}
+
+.trello-logo::after {
+    right: -48px;
+    content: 'Trello';
+}
+
+.login-icon:after {
+    right: -54px;
+    content: 'Log In';
+}
+
+.user-id-initial {
+    top: 6.9px;
+    left: 12px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    position: absolute;
+    text-shadow: 1px 0 2px black;
+}
+
+.user-profile {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative;
+    margin-right: 10px;
+    background: hsla(0, 0%, 100%, .3);
+}
+
+.user-profile:after {
+    content: 'Log Out';
+    position: absolute;
+    left: -66px;
+    top: 11px;
+    font-style: italic;
+    color: #fff;
+    font-weight: bold;
+}

@@ -1,0 +1,14 @@
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_START = "LOGIN_START";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOG_OUT = "LOG_OUT";
+
+
+export const USER_KEY_CHANGE = "USER_KEY_CHANGE";
+export const USER_TOKEN_CHANGE = "USER_TOKEN_CHANGE";
+
+export const NO_BOARD_CHOSEN = "NO_BOARD_CHOSEN";
+export const FETCH_ALL_BOARDS = "FETCH_ALL_BOARDS";
+export const FETCH_BOARD_ACTIONS = "FETCH_BOARD_ACTIONS";
+export const GET_BOARD_INFO_BY_ID = "GET_BOARD_INFO_BY_ID";
+

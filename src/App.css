@@ -1,0 +1,29 @@
+body {
+    background: url("./assets/images/bg-image.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+header {
+    padding: 4px 10px;
+    background: #026aa7;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 40px);
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.main-menu {
+    float: left;
+    background: red;
+}
+
+.information-block {
+    float: right;
+    background: blue;
+}
